@@ -1,0 +1,766 @@
+@import "https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300|Raleway:400,300,600,700";
+
+/* ==========================================================================
+   HTML5 display definitions & base rules
+   ========================================================================== */
+
+header, 
+footer, 
+section, 
+article, 
+aside, 
+nav {
+    display: block;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: "Open Sans","Arial";
+    margin: 0;
+}
+
+/* ==========================================================================
+   Layout structure
+   ========================================================================== */
+
+.container__wrap {
+    margin: 0 auto;
+    max-width: 1000px;
+    min-width: 600px;
+}
+.container {}
+.container__header {}
+.container__info {}
+.container__downloads {}
+.container__contactUs {}
+.container__footer {}
+.container__clearfix {
+    clear: both;
+}
+
+@media screen and (max-width: 1000px) {
+    .container__wrap
+    {
+        min-width: 480px;
+    }
+}
+@media screen and (max-width: 480px) {
+    .container__wrap
+    {
+        min-width: 300px;
+    }
+}
+
+/* ==========================================================================
+   1. Header block rules
+   ========================================================================== */
+
+.header {
+    background: #000;
+    box-sizing: border-box;
+    padding: 21px;
+}
+.header:after {
+    content: '';
+    display: block;
+    height: 0;
+    clear: both;
+}
+.header__logo {
+    float: left;
+}
+.logo {
+}
+.logo__link {
+}
+.logo__img {
+}
+.header__menu {
+    float: right;
+    margin: 7px 0 0;
+}
+.menu {
+    font-size: 0;
+    margin: 0;
+    padding: 0;
+}
+.menu__item {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 600;
+    margin-left: 46px;
+}
+.menu__item:first-child {
+    margin-left: 0;
+}
+.menu__link {
+    color: #d4d4d4;
+    text-decoration: none;
+}
+@media screen and (max-width: 600px) {
+    .menu__item {
+        margin-left: 20px;
+    }
+}
+@media screen and (max-width: 480px) {
+    .menu__item {
+        margin-left: 10px;
+        font-size: 12px;
+    }
+}
+@media screen and (max-width: 420px) {
+    .header {
+        padding-left: 5px;
+        height: auto;
+    }
+    .logo__img {
+        width: 50px;
+        height: auto;
+    }
+    .header__menu {
+        margin-top: 0;
+    }
+}
+@media screen and (max-width: 350px) {
+    .header__logo {
+        display: none;
+    }
+}
+
+/* ==========================================================================
+   2. Info block rules
+   ========================================================================== */
+
+.info {
+    background: url("../images/header/header-bg.jpg") no-repeat top;
+    background-size: cover;
+    font-size: 0;
+    padding: 110px 0 138px;
+}
+.info__about {
+    display: inline-block;
+    vertical-align: top;
+    width: 60%;
+}
+.aboutCompany {
+    font-family: "Raleway";
+}
+.aboutCompany__logo {
+}
+.aboutCompany__slogan {
+    color: #fff;
+    font-size: 36px;
+    margin: 33px 0 81px;
+    text-transform: uppercase;
+}
+.aboutCompany__description {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 23px;
+    margin-bottom: 45px;
+}
+.aboutCompany__button {
+    border: 1px solid #d2d1d0;
+    color: #fff;
+    display: block;
+    font-family: "Open Sans";
+    font-size: 15px;
+    font-weight: 600;
+    height: 38px;
+    line-height: 38px;
+    outline: 1px solid #fff;
+    text-align: center;
+    text-decoration: none;
+    text-transform: capitalize;
+    width: 131px;
+}
+.info__getTrialForm {
+    display: inline-block;
+    vertical-align: top;
+    width: 40%;
+}
+.getTrial {
+    background: #fff none repeat scroll 0 0;
+    border-radius: 3px;
+}
+.getTrial__header {
+    background: #f5f5f5 none repeat scroll 0 0;
+    border-radius: 3px 3px 0 0;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 54px;
+    margin: 0 0 30px;
+    text-align: center;
+}
+.getTrial__span {
+    color: #ff9b51;
+    text-transform: uppercase;
+}
+.getTrial__textfield {
+    border-bottom: 1px solid #d6d6d6;
+    border-top: none;
+    border-right: 1px solid #fbfbfb;
+    border-left: 1px solid #fbfbfb;
+    display: block;
+    height: 35px;
+    margin: 0 auto 33px;
+    padding: 0 0 0 13px;
+    width: 79%;
+}
+.getTrial__textfield:placeholder {
+	color: #bdbdbd;
+	font-size: 14px;
+}
+.getTrial__textfield::-webkit-input-placeholder {
+  	color: #bdbdbd;
+	font-size: 14px;
+}
+.getTrial__textfield::-moz-placeholder { /* Firefox 18- */
+  	color: #bdbdbd;
+	font-size: 14px;
+}
+.getTrial__textfield::-moz-placeholder {  /* Firefox 19+ */
+	color: #bdbdbd;
+	font-size: 14px; 
+}
+.getTrial__textfield:-ms-input-placeholder {  
+	color: #bdbdbd;
+	font-size: 14px;  
+}
+.getTrial__btn {
+    background: #ff9b51 none repeat scroll 0 0;
+    border: medium none;
+    border-radius: 0 0 3px 3px;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+    height: 54px;
+    margin: 15px 0 0;
+    width: 100%;
+    cursor: pointer;
+}
+@media screen and (max-width: 1000px) {
+    .info__about {
+        display: block;
+        width: 80%;
+        margin: 0 auto 80px;
+    }
+    .aboutCompany__logo {
+        display: block;
+        float: left;
+        margin: 10px 20px 0 0;
+    }
+    .aboutCompany__slogan {
+        margin: 0 0 50px 0;
+        font-size: 30px;
+    }
+    .aboutCompany__button {
+        margin: 0 auto;
+    }
+    .info__getTrialForm {
+        display: block;
+        width: 80%;
+        margin: 0 auto;
+    }
+}
+@media screen and (max-width: 800px) {
+    .aboutCompany__logo {
+        display: block;
+        float: none;
+        margin: 0 auto;
+    }
+    .aboutCompany__slogan {
+        margin: 33px 0 50px;
+        font-size: 30px;
+        text-align: center;
+    }
+    .aboutCompany__description {
+        text-align: center;
+    }
+    .info__getTrialForm {
+        width: 100%;
+    }
+}
+
+/* ==========================================================================
+   3. Downloads block rules
+   ========================================================================== */
+
+.downloads {
+    font-size: 0;
+    background: #f5f5f5;
+    padding: 146px 0 115px;
+    box-sizing: border-box;
+}
+.downloads__tabblock {
+    width: 63%;
+    display: inline-block;
+    vertical-align: top;
+}
+.downloads__logo {
+    display: inline-block;
+    width: 37%;
+    height: 200px;
+    background: url(../images/content/1.png) no-repeat top right;
+    vertical-align: top;
+}
+.downloads__heading {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 55px 0 55px;
+}
+.downloads__heading:first-of-type {
+    margin: 10px 0 55px;
+}
+.downloads__paragraph:last-of-type {
+    margin-bottom: 50px;
+}
+.downloads__paragraph {
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+.downloads__btn {
+    border: none;
+    background: #ff8b38;
+    color: #fff;
+    width: 119px;
+    height: 44px;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.tabblock__input {
+    display: none;
+}
+.tabblock__label {
+    display: block;
+    clear: both;
+    float: left;
+    font-weight: 700;
+    font-size: 15px;
+    text-transform: uppercase;
+    width: 110px;
+    height: 110px;
+    background: #333333;
+    border-bottom: 1px solid #f5f5f5;
+    box-sizing: border-box;  
+    color: #fff;
+    text-align: center;
+    line-height: 110px;
+    margin-right: 60px
+}
+.downloads__tabblock:after {
+    content: '';
+    display: block;
+    height: 0;
+    clear: both;
+}
+.tabblock__label:first-of-type {
+    border-radius: 3px 3px 0 0 ;
+}
+.tabblock__label:last-of-type {
+    border-bottom: none;
+    border-radius: 0 0 3px 3px;
+}
+.tabblock__input:checked + .tabblock__label {
+    background: #ff8b38;
+}
+.tabblock__section {
+    display: none;
+    max-height: 374px;
+    overflow: auto;
+    top: 0;
+    left: 16.66%;
+}
+.tabblock__input_tab1:checked ~ .tabblock__section_tab1,
+.tabblock__input_tab2:checked ~ .tabblock__section_tab2,
+.tabblock__input_tab3:checked ~ .tabblock__section_tab3 {
+  display: block;
+} 
+
+@media screen and (max-width: 1000px) {
+    .downloads {
+        padding: 146px 5% 65px;
+    }
+    .downloads__tabblock {
+        width: 100%;
+        display: block;
+    }
+    .downloads__logo {
+        display: none;
+    }
+    .downloads__btn {
+        float: right;
+    }
+    .tabblock__label:last-of-type {
+        margin-bottom: 50px;
+    }
+    .tabblock__section {
+        max-height: none;
+        overflow: visible;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .downloads__tabblock {
+        width: 100%;
+        display: block;
+    }
+    .downloads__logo {
+        display: none;
+    }
+    .downloads__btn {
+        float: none;
+        width: 200px;
+        height: 60px;
+    }
+    .tabblock__label {
+        display: inline-block;
+        border-bottom: none;
+        margin-right: 10px;
+        float: none;
+        margin-bottom: 50px;
+    }
+    .tabblock__label:first-of-type {
+        border-radius: 3px 0 0 3px;
+    }
+    .tabblock__label:last-of-type {
+        margin-right: none;
+        border-radius: 0 3px 3px 0;
+    }
+    .tabblock__section {
+        max-height: none;
+        overflow: visible;
+    }
+}
+@media screen and (max-width: 420px) {
+    .tabblock__label {
+        width: 80px;
+        height: 80px;
+        line-height: 80px;
+    }
+}
+
+/* ==========================================================================
+   4. Features block rules
+   ========================================================================== */
+
+.features {
+    padding: 110px 0 104px;
+    box-sizing: border-box;  
+    font-size: 0;
+}
+.features__title {
+    text-align: center;
+    font-family: 'Raleway';
+    font-size: 36px; 
+    font-weight: 400;
+    margin-bottom: 60px;
+    text-transform: uppercase;
+} 
+.features__title::after {
+    border-top: 2px solid #ff8b38;
+    content: "";
+    display: block;
+    position: absolute;
+    left: 50%;
+    margin: 30px 0 0 -32px;
+    width: 64px;
+}
+.features__subtitle {
+    text-align: center;
+    font-weight: 400;
+    font-size: 14px; 
+    margin-bottom: 80px;
+} 
+.features__block {
+    width: 33.333%;
+    display: inline-block;
+    padding: 0 5px;
+    box-sizing: border-box;
+    vertical-align: top;
+} 
+.features__link {
+    text-decoration: none;
+    color: #000;
+} 
+.features__logo {
+    box-sizing: border-box;
+    width: 70px;
+    height: 70px;
+    border: 2px solid #ff8b38;
+    border-radius: 50%;
+    margin: 0 auto;
+    background: url(../images/content/3.png) no-repeat;
+} 
+.features__logo_thoughtfulDesign {
+    background-position: 23px 20px;;
+} 
+.features__logo_wellCrafted {
+    background-position: -87px 20px;
+} 
+.features__logo_easyToCustomize {
+    background-position: -185px 20px;
+} 
+.features__heading {
+    font-size: 20px; 
+    font-weight: 700;
+    text-align: center;
+    margin: 30px 0;
+} 
+.features__description {
+    font-size: 14px; 
+    font-weight: 400;
+    text-align: center;
+    color: #86878b;
+    letter-spacing: -1px;
+} 
+@media screen and (max-width: 1000px) {
+    .features {
+        padding: 110px 5% 104px;
+    }
+    .features__block {
+        display: block;
+        width: 80%;
+        margin: 0 auto 50px;
+    } 
+    .features__logo {
+        margin: 0 30px 30px 0;
+        float: left;
+    } 
+    .features__heading {
+        font-size: 20px; 
+        font-weight: 700;
+        text-align: left;
+        margin: 30px 0;
+    } 
+    .features__description {
+        text-align: left;
+    } 
+}
+@media screen and (max-width: 667px) {
+    .features__block {
+        display: block;
+        width: 80%;
+        margin: 0 auto 50px;
+    } 
+    .features__block:last-child {
+        margin: 0 auto;
+    } 
+    .features__logo {
+        float: none;
+        margin: 0 auto;
+    }
+    .features__heading {
+        text-align: center;
+    }
+    .features__description {
+        text-align: center;
+    }
+}
+
+/* ==========================================================================
+   5. Contact us block rules
+   ========================================================================== */
+
+.contactUs {
+    background: #ff8b38;
+    padding:104px 0 80px;
+    font-size: 0;
+    box-sizing: border-box;
+}
+.contactUs__title {
+    text-align: center;
+    font-family: 'Raleway';
+    font-size: 36px; 
+    font-weight: 400;
+    margin-bottom: 60px;
+    text-transform: uppercase;
+}
+.contactUs__subtitle {
+    text-align: center;
+    font-weight: 400;
+    font-size: 14px; 
+    margin-bottom: 80px;
+    color: #fff;
+}
+.contactUs__contactForm {}
+.contactForm {}
+.contactForm__column {
+    width: 48%;
+}
+.contactForm__column_left {
+    float: left;
+}
+.contactForm__column_right {
+    float: right;
+}
+.contactForm__textField {
+    width: 100%;
+    border: none;
+    height: 31px;
+    box-sizing: border-box;
+    padding: 10px;
+    margin-bottom: 30px;
+}
+.contactForm__textField:last-child {
+    margin-bottom: none;   
+}
+.contactForm__textArea {
+    width: 100%;
+    border: none;
+    resize: none;
+    height: 153px;
+    box-sizing: border-box;
+    padding: 10px;
+}
+.contactForm__textArea::placeholder,
+.contactForm__textField::placeholder {
+    font-size: 14px;
+    color: #bdbdbd;
+}
+.contactForm__textArea::-webkit-input-placeholder,
+.contactForm__textField::-webkit-input-placeholder {
+    font-size: 14px;
+    color: #bdbdbd;
+}
+.contactForm__textArea::-moz-placeholder,
+.contactForm__textField::-moz-placeholder { /* Firefox 18- */
+    font-size: 14px;
+    color: #bdbdbd;
+}
+.contactForm__textArea::-moz-placeholder,
+.contactForm__textField::-moz-placeholder {  /* Firefox 19+ */
+    font-size: 14px;
+    color: #bdbdbd;
+}
+.contactForm__textArea:-ms-input-placeholder,
+.contactForm__textField:-ms-input-placeholder {  
+    font-size: 14px;
+    color: #bdbdbd; 
+}
+.contactForm__btn {
+    margin: 42px auto 0;
+    display: block;
+    border: none;
+    background: #000;
+    color: #fff;
+    font-weight: 400;
+    font-size: 15px;
+    width: 146px;
+    height: 44px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+@media screen and (max-width: 1000px) {
+    .contactUs {
+        padding: 104px 5% 80px;
+    }
+    .contactForm__column {
+        width: 100%;
+    }
+    .contactForm__column_left {
+        float: none;
+        margin: 0 auto;
+    }
+    .contactForm__column_right {
+        float: none;
+        margin: 0 auto;
+    }
+    .contactForm__textField {
+        height: 50px;
+    }
+    .contactForm__textArea {
+        height: 200px;
+    }
+}
+@media screen and (max-width: 480px) {
+    .contactForm__column_left {
+        float: none;
+        margin: 0 auto;
+    }
+    .contactForm__column_right {
+        float: none;
+        margin: 0 auto;
+    }
+    .contactForm__btn {
+        width: 80%;
+        height: 80px;
+    }
+}
+
+/* ==========================================================================
+   6. Footer block rules
+   ========================================================================== */
+
+.footer {
+    box-sizing: border-box;
+    padding: 35px 0 14px;
+    background: #000;
+}
+.footer__socials {}
+.socials {
+    font-size: 0;
+    width: 371px;
+    margin: 0 auto;
+}
+.socials__link {
+    display: inline-block;
+    width: 52px;
+    height: 30px;
+    background: url(../images/footer/social-icons.png) no-repeat;
+}
+.socials__link_item1 {
+    background-position: 19px 3px;
+}
+.socials__link_item2 {
+    background-position: -29px 3px;
+}
+.socials__link_item3 {
+    background-position: -79px 3px;
+}
+.socials__link_item4 {
+    background-position: -127px 2px;
+}
+.socials__link_item5 {
+    background-position: -178px 3px;
+}
+.socials__link_item6 {
+    background-position: -231px 2px;
+}
+.socials__link_item7 {
+    background-position: -282px 3px;
+}
+.socials__link_item1:hover {
+    background-position: 19px -31px;
+}
+.socials__link_item2:hover {
+    background-position: -29px -31px;
+}
+.socials__link_item3:hover {
+    background-position: -79px -31px;
+}
+.socials__link_item4:hover {
+    background-position: -127px -32px;
+}
+.socials__link_item5:hover {
+    background-position: -178px -31px;
+}
+.socials__link_item6:hover {
+    background-position: -231px -32px;
+}
+.socials__link_item7:hover {
+    background-position: -282px -31px;
+}
+.footer__copyright {
+    text-align: center;
+    font-size: 12px;
+    font-weight: 300;
+    color: #a2a2a2;
+    margin-top: 10px;
+}
+

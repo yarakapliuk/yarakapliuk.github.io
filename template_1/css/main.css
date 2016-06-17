@@ -1,0 +1,504 @@
+
+@import "https://fonts.googleapis.com/css?family=Lato:400,300,700";
+@font-face {
+    font-family: 'Lato-Hairline';
+    src: url('fonts/Lato-Hai.eot');
+    src: local('☺'), url('fonts/Lato-Hai.woff') format('woff'), url('fonts/Lato-Hai.ttf') format('truetype'), url('fonts/Lato-Hai.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Lato-Hairline-Italic';
+    src: url('fonts/Lato-HaiIta.eot');
+    src: local('☺'), url('fonts/Lato-HaiIta.woff') format('woff'), url('fonts/Lato-HaiIta.ttf') format('truetype'), url('fonts/Lato-HaiIta.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+body {
+    /* background: rgba(0, 0, 0, 0) url("../images/Fudi.jpg") no-repeat scroll center top; */
+    font-family: "Lato","Tahoma";
+    margin: 0;
+    padding: 0;
+}
+div.container {
+    min-width: 1600px;
+}
+div.wrap {
+    margin: 0 auto;
+/*     outline: 1px solid orange; */
+    width: 1180px;
+}
+header {
+    background: rgba(0, 0, 0, 0) url("../images/top-bg.jpg") no-repeat scroll center top / cover ;
+    height: 880px;
+}
+header div.logo {
+    float: left;
+    height: 105px;
+    margin: 3px 0 0 -31px;
+    width: 129px;
+}
+header div.logo a {
+}
+nav {
+    float: right;
+    margin: 44px 0 0;
+}
+nav ul.authorization {
+    display: inline-block;
+    font-size: 0;
+    list-style: outside none none;
+    margin: 0;
+    padding: 0;
+}
+nav ul.authorization li {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: bold;
+    margin: 0 0 0 30px;
+    text-transform: uppercase;
+    word-spacing: 2px;
+}
+nav ul.authorization li a {
+    color: #fff;
+    text-decoration: none;
+}
+nav ul.authorization li a:hover {
+}
+nav div.dropdown-menu {
+    display: inline-block;
+    margin: 0 0 0 28px;
+    position: relative;
+}
+nav div.dropdown-menu a.sandvich-btn {
+    color: #fff;
+}
+nav div.dropdown-menu ul.submenu {
+    top: -24px;
+    z-index: -1;
+}
+nav div.dropdown-menu:hover {
+    cursor: pointer;
+}
+div.dropdown-menu:hover ul.submenu {
+    top: 0;
+    transition: all 1s ease-out 0s;
+    z-index: 1;
+}
+ul.submenu {
+    display: none;
+    list-style: outside none none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    right: -84px;
+    width: 100px;
+}
+ul.submenu li:first-of-type {
+    margin: 40px 0 10px;
+}
+ul.submenu li a {
+    color: white;
+    display: block;
+    font-size: 16px;
+    font-style: italic;
+    font-weight: bold;
+    opacity: 0.7;
+    text-decoration: none;
+}
+ul.submenu:hover {
+    cursor: pointer;
+}
+div.clearfix {
+    clear: both;
+}
+div.get-recipes {
+    color: #fff;
+    margin: 235px 0 0;
+    text-align: center;
+}
+div.get-recipes div.slogan {
+    font-family: "Times New Roman";
+    font-size: 36px;
+    font-style: italic;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin: 0 0 0 26px;
+    opacity: 0.7;
+    word-spacing: -1px;
+}
+div.get-recipes h1 {
+    font-size: 100px;
+    letter-spacing: 5px;
+    margin: -7px 0 0;
+    text-transform: uppercase;
+}
+div.get-recipes a.get-started-btn {
+    border: 3px solid #fff;
+    box-sizing: border-box;
+    color: #fff;
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+    height: 68px;
+    letter-spacing: 0;
+    line-height: 65px;
+    margin: 20px auto 0;
+    padding: 0 0 0 3px;
+    text-decoration: none;
+    text-transform: uppercase;
+    width: 280px;
+    word-spacing: 2px;
+}
+div.get-recipes div.additional {
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin: 37px 0 0 2px;
+    word-spacing: -2px;
+}
+div.get-recipes div.additional a {
+    color: #fff;
+}
+div.info {
+    background: #fff none repeat scroll 0 0;
+    box-sizing: border-box;
+    height: 438px;
+    margin: 0;
+    padding: 101px 0 0;
+}
+div.info a {
+    color: #000;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: top;
+    width: 390px;
+}
+div.info div.icon-getInspired {
+    background: rgba(0, 0, 0, 0) url("../images/icons.png") no-repeat scroll 0 -5px;
+}
+div.info div.icon-getRewarded {
+    background: rgba(0, 0, 0, 0) url("../images/icons.png") no-repeat scroll -107px -4px;
+    margin: 0 0 0 145px;
+}
+div.info div.icon-getSocial {
+    background: rgba(0, 0, 0, 0) url("../images/icons.png") no-repeat scroll -208px -6px;
+    margin: 0 0 0 162px;
+}
+div.info a div {
+    border: 2px solid #000;
+    border-radius: 50%;
+    box-sizing: border-box;
+    height: 107px;
+    margin: 0 0 0 127px;
+    width: 107px;
+}
+h2.icon-getInspired {
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin: 16px 0 -8px -27px;
+    text-transform: uppercase;
+    word-spacing: -1px;
+}
+h2.icon-getRewarded {
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin: 16px 0 -9px 7px;
+    text-transform: uppercase;
+    word-spacing: -1px;
+}
+h2.icon-getSocial {
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin: 16px 0 -9px 42px;
+    text-transform: uppercase;
+    word-spacing: -1px;
+}
+img.icon-getInspired {
+    margin: 0 0 0 -27px;
+}
+img.icon-getRewarded {
+    margin: 0 0 0 7px;
+}
+img.icon-getSocial {
+    margin: 0 0 0 42px;
+}
+div.info a p {
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    line-height: 26px;
+    margin: 8px 0 0;
+    padding: 0 1px;
+}
+section {
+    background: rgba(0, 0, 0, 0) url("../images/phone-bg.jpg") no-repeat scroll center top / cover ;
+    height: 881px;
+}
+section img.phone {
+    display: inline-block;
+    margin: 103px 0 0;
+}
+section img.icon-section {
+}
+article {
+    box-sizing: border-box;
+    display: inline-block;
+    padding: 161px 0 0 87px;
+    vertical-align: top;
+    width: 630px;
+}
+section h2 {
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin: 15px 0 -9px;
+    word-spacing: -1px;
+}
+section p {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 25px;
+    margin: 9px 0 30px;
+}
+section p:last-of-type {
+    margin-bottom: 26px;
+}
+section a {
+    display: inline-block;
+    height: 39px;
+}
+section a.appStore {
+    background: rgba(0, 0, 0, 0) url("../images/app-store.png") no-repeat scroll 0 0;
+    margin: 0 7px 0 4px;
+    width: 112px;
+}
+section a.googlePlay {
+    background: rgba(0, 0, 0, 0) url("../images/google-play.png") no-repeat scroll 0 0;
+    width: 120px;
+}
+
+/*********Alternate method how to make underline*********/
+
+h2.icon-getInspired::after {
+    border-top: 1px solid #f57365;
+    content: "";
+    display: block;
+    margin: 7px 0 0 165px;
+    position: absolute;
+    width: 88px;
+}
+h2.icon-getRewarded::after {
+    border-top: 1px solid #f57365;
+    content: "";
+    display: block;
+    margin: 6px 0 0 148px;
+    position: absolute;
+    width: 88px;
+}
+h2.icon-getSocial::after {
+    border-top: 1px solid #f57365;
+    content: "";
+    display: block;
+    margin: 6px 0 0 130px;
+    position: absolute;
+    width: 88px;
+}
+
+/*********Alternate method how to make underline*********/
+
+div.reviews {
+    background: rgba(0, 0, 0, 0) url("../images/middle-bg.jpg") no-repeat scroll center top / cover ;
+    box-sizing: border-box;
+    height: 460px;
+    margin: 0 auto;
+    padding: 76px 0 0;
+}
+div.photo {
+    background: rgba(0, 0, 0, 0) url("../images/photo_1.png") no-repeat scroll 0 0;
+    height: 113px;
+    margin: 0 auto;
+    width: 113px;
+}
+div.reviews p {
+    color: #fff;
+    font-weight: 300;
+    opacity: 0.9;
+}
+p.feedback {
+    font-family: "Lato-Hairline";
+    font-size: 30px;
+    letter-spacing: 0;
+    line-height: 44px;
+    margin: 16px 103px;
+    text-align: center;
+    word-spacing: 0;
+}
+p.feedback-author {
+    font-family: "Lato-Hairline-Italic";
+    font-size: 18px;
+    margin-top: 0;
+    text-align: center;
+}
+ul.feedback-scroll {
+    font-size: 0;
+    margin: 38px auto;
+    padding: 0;
+    width: 50px;
+}
+ul.feedback-scroll li {
+    background: #766a75 none repeat scroll 0 0;
+    border-radius: 50%;
+    display: inline-block;
+    height: 10px;
+    margin-left: 10px;
+    width: 10px;
+}
+ul.feedback-scroll li.current {
+    background: #fff none repeat scroll 0 0;
+}
+ul.feedback-scroll li:first-child {
+    margin-left: 0;
+}
+ul.feedback-scroll li a {
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+ul.feedback-scroll li a:hover {
+}
+div.browse {
+    box-sizing: border-box;
+    height: 613px;
+    padding: 94px 0 0;
+}
+div.browse-heading-block {
+    margin: 0 auto;
+    position: relative;
+    width: 204px;
+}
+h2.browse-heading {
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin: 0;
+    text-align: center;
+    word-spacing: -1px;
+}
+h2.browse-heading::after {
+    border-top: 1px solid #f57365;
+    content: "";
+    display: block;
+    left: 50%;
+    margin: 6px 0 0 -44px;
+    position: absolute;
+    width: 88px;
+}
+div.cuisines {
+    font-size: 0;
+    height: 450px;
+    margin: 47px auto 0;
+    width: 1600px;
+}
+a.cuisines-item {
+    background: rgba(0, 0, 0, 0) url("../images/cuisines.jpg") repeat scroll 0 0;
+    color: #fff;
+    display: inline-block;
+    height: 225px;
+    text-decoration: none;
+    width: 320px;
+}
+a.italian {
+    background-position: 0 0;
+}
+a.indian {
+    background-position: -320px 0;
+}
+a.french {
+    background-position: -640px 0;
+}
+a.steakhouse {
+    background-position: -960px 0;
+}
+a.seafood {
+    background-position: -1280px 0;
+}
+a.sushi {
+    background-position: 0 -225px;
+}
+a.mexican {
+    background-position: -320px -225px;
+}
+a.chinese {
+    background-position: -640px -225px;
+}
+a.pizza {
+    background-position: -960px -225px;
+}
+a.american {
+    background-position: -1280px -225px;
+}
+div.cuisine-count {
+    font-family: "Times New Roman";
+    font-size: 15px;
+    font-style: italic;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin: 72px 0 -1px 2px;
+    text-align: center;
+    word-spacing: -1px;
+}
+div.cuisine-name {
+    font-size: 36px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin: 0 0 0 1px;
+    text-align: center;
+    text-transform: uppercase;
+}
+div.stats {
+    box-sizing: border-box;
+    font-size: 0;
+    height: 176px;
+    margin: 0 auto;
+    padding: 50px 0 0;
+    text-align: center;
+}
+div.stats-item {
+    display: inline-block;
+    margin-left: 123px;
+    vertical-align: top;
+}
+div.stats-item:first-child {
+    margin-left: -5px;
+}
+div.stats-count {
+    font-size: 36px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin: 0 auto;
+}
+div.stats-name {
+    color: #444444;
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    margin: 5px auto 0;
+}
+footer {
+    background: rgba(0, 0, 0, 0) url("../images/bottom-bg.jpg") repeat scroll 0 0;
+    border-top: 1px solid #e2e2e2;
+    box-sizing: border-box;
+    height: 93px;
+    padding: 37px 0 0;
+}
+div.copyright {
+    color: #b8b8b8;
+    font-size: 14px;
+    font-weight: 300;
+    word-spacing: -1px;
+}

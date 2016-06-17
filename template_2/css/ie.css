@@ -1,0 +1,7 @@
+img {
+	border: 0;
+}
+
+.info {
+	-ms-behavior: url(backgroundsize.min.htc);
+}
