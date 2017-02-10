@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.b-slider {
+    width: 800px;
+    margin: 40px auto 0;
+    position: relative;
+}
+.b-picture__image {
+    border-radius: 8px;
+}
+.b-navigate {
+    width: 580px;
+    height: 50px;
+    margin: 40px auto 0;
+    position: relative;
+    z-index: 2;
+}
+.b-navigate__point {
+    width: 100px;
+    height: 50px;
+    float: left;
+    margin-right: 20px;
+    cursor: pointer;
+    box-shadow: inset 5px 5px 5px #fff,
+                inset -5px -5px 5px #fff;
+}   
+.b-navigate__point:last-child {
+    margin-right: 0;
+}
+.b-navigate__point_selected {
+    box-shadow: none;
+    /* border-radius: 4px; */
+}   
+.b-controls {
+    width: 100%;
+    padding: 0 55px;
+    box-sizing: border-box;
+    position: absolute;
+    color: #000;;
+    top: 91%;
+    z-index: 1;
+}
+.b-controls__common {
+    cursor: pointer;
+    opacity: 0.5;
+}
+.b-controls__common:hover {
+    opacity: 0.8;
+} 
+.b-controls__prev {
+    float: left;
+}
+.b-controls__next {
+    float: right;
+}

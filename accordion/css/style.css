@@ -1,0 +1,132 @@
+@import "https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300|Raleway:400,300,600,700";
+
+/* ==========================================================================
+   HTML5 display definitions & base rules
+   ========================================================================== */
+
+header, 
+footer, 
+section, 
+article, 
+aside, 
+nav {
+    display: block;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: Bitter;
+    background-color: #F2F2F2;
+}
+li {
+	list-style: none;
+} 
+li > a {
+	display: block;
+	text-decoration: none;
+}
+
+/* ==========================================================================
+   Layout structure
+   ========================================================================== */
+
+.container {} 
+.header {} 
+.container__wrap {
+	width: 1000px;
+	margin: 0 auto;
+} 
+.main {
+	padding: 20px 0;
+} 
+.main__bar {
+	background-color: #363636;
+	width: 25%;
+	border-radius: 10px;
+	margin-right: 5%;
+	box-sizing: border-box;
+	padding: 40px;
+	float: left;
+} 
+.main__section {
+	width: 70%;
+	border: 1px solid #DADADA;
+	border-radius: 10px;
+	background-color: #fff;
+	padding: 60px 50px;
+	box-sizing: border-box;
+	float: left;
+	text-align: justify;
+} 
+.main:after {
+	content: '';
+	display: block;
+	clear: both;
+}
+.menu__link {
+	color: #fff;
+	height: 30px;
+	line-height: 30px;
+	border-bottom: 1px solid #6A6A6A;
+} 
+.menu__link:hover {
+	color: #81d742;
+}
+.menu__link_uppercase {
+	text-transform: uppercase;
+}
+.submenu {
+	border-bottom: 1px solid #6A6A6A;
+	padding: 10px 0;
+	display: none;
+}
+.submenu__link {
+	color: #949494;
+}
+.submenu__link:hover {
+	color: #C9C9C9;
+} 
+.subsub {
+	padding-left: 15px;
+	display: none;
+}
+.subsub__link {
+	color: #C9C9C9;
+}
+.subsub__link:hover {
+	color: #66D9EF;
+}
+.article {}
+.article__header {
+	font-size: 20px;
+	margin: 20px 0;
+	text-transform: capitalize;
+}
+.article__paragraph {
+	padding: 20px;
+}
+.footer {} 
+.container__feedback {
+	display: none;
+} 
+.feedback {} 
+.feedback__input {} 
+.feedback__area {} 
+.container__top {
+	font-size: 24px;
+	text-align: center;
+	line-height: 40px;
+	position: fixed;
+	bottom: 40px;
+	right: 100px;
+	width: 40px;
+	height: 40px;
+	background-color: #000;
+	opacity: 0.4;
+	border-radius: 5px;
+	color: #fff;
+	cursor: pointer;
+	display: none;
+} 
