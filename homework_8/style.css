@@ -300,6 +300,9 @@ nav ul .nav-item span:hover {
 .rating div {
     margin: 0 2px;
 }
+.rating div:hover {
+    cursor: pointer;
+}
 .rating div:after {
     content: '\F006';
     font-family: FontAwesome;
