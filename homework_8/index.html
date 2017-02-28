@@ -201,6 +201,119 @@
                 </aside>
         </div>
     </div>
+    <footer>
+        <div class="footer-wrap">
+            <div class="container promo-wrap flex-row row-center">
+                <div class="promo">
+                    <a  href="http://stackoverflow.com/questions/tagged/google-maps-api-3">
+                       <img class="devsite-footer-promo-icon" src="https://developers.google.com/site-assets/logo-stack-overflow.svg?hl=ru">
+                        Stack Overflow
+                    </a>
+                    <div class="promo-text">
+                        Задайте вопрос с тегом google-maps-api-3.
+                    </div>
+                </div>
+                <div class="promo">
+                    <a href="https://github.com/googlemaps/">
+                        <img class="devsite-footer-promo-icon" src="https://developers.google.com/site-assets/logo-github.svg?hl=ru">
+	                    GitHub
+                    </a>
+                    <div class="promo-text">
+                        Ознакомьтесь с нашими примерами и опробуйте их на практике.
+                    </div>
+                </div>
+                <div class="promo">
+                    <a href="https://googlegeodevelopers.blogspot.com">
+                        <img class="devsite-footer-promo-icon" src="https://developers.google.com/site-assets/blogger_64dp.png?hl=ru">
+                        Блог 
+                    </a>
+                    <div class="promo-text">
+                        Ознакомьтесь с последними обновлениями, историями клиентов и рекомендациями.
+                    </div>
+                </div>
+                <div class="promo">
+                    <a href="https://code.google.com/p/gmaps-api-issues/issues/list?can=2&amp;q=apitype%3AJavascript3&amp;colspec=ID+Type+Status+Introduced+Fixed+Summary+Internal+Stars&amp;cells=tiles&amp;hl=ru">
+                        <img src="https://developers.google.com/site-assets/developers_64dp.png?hl=ru">
+                        Отслеживание проблем
+                    </a>
+                    <div class="promo-text">
+                        Возникла ошибка? Отправьте нам отчет об ошибке!
+                    </div>
+                </div>
+            </div>
+        </div> 
+        <div class="footer-wrap">
+            <div class="container flex-row row-space-between">
+                <div class="linkbox">
+                    <h3>Подробнее</h3>
+                    <ul>
+                        <li>Учебные материалы</li>
+                        <li>Цены и планы</li>
+                        <li>Выбор API</li>
+                        <li>Статьи</li>
+                    </ul>
+                </div>
+                <div class="linkbox">
+                    <h3>Платформы</h3>
+                    <ul>
+                        <li>Android</li>
+                        <li>iOS</li>
+                        <li>Веб</li>
+                        <li>Веб-службы</li>
+                    </ul>
+                </div>
+                <div class="linkbox">
+                    <h3>Информация о продукте</h3>
+                    <ul>
+                        <li>Связаться с отделом продаж</li>
+                        <li>Поддержка сообщества</li>
+                        <li>Платная поддержка</li>
+                        <li>Условия использования</li>
+                    </ul>
+                </div>
+                <div class="linkbox">
+                    <h3>111</h3>
+                </div>
+            </div>
+        </div>
+        <div class="footer-wrap">
+           
+        </div>
+    </footer>
+    <script>
+        var leftNav = document.querySelector(".left-menu nav"),
+            rightNav = document.querySelector(".right-menu nav"),
+            content = document.querySelector(".content-wrap"),
+            footer = document.querySelector("footer"),
+            navHeight, contentStyle, footerVisible;
+        
+        contentStyle = getComputedStyle(content);
+        
+        navHeight = document.documentElement.clientHeight - parseInt(contentStyle.marginTop) - parseInt(contentStyle.marginBottom);
+        
+        leftNav.style.height = navHeight + "px";
+        rightNav.style.height = navHeight + "px";
+        
+        function setHeight(elem, value) {
+            if(value > 0) {
+                elem.style.height = navHeight - value + "px"
+            }
+            else {
+                elem.style.height = navHeight + "px";
+            }
+        }
+        
+        window.onscroll = function() {
+            footerVisible = document.documentElement.clientHeight - footer.getBoundingClientRect().top;
+            
+            setHeight(leftNav, footerVisible);
+            setHeight(rightNav, footerVisible);
+            
+//            footerVisible > 0 ?
+//            leftNav.style.height = navHeight - footerVisible + "px"
+//            : leftNav.style.height = navHeight + "px";
+        }
+    </script>
 </body>
 
 </html>

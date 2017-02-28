@@ -32,6 +32,12 @@ body {
               -ms-flex-pack: justify;
             justify-content: space-between;
 }
+.row-center {
+           -webkit-box-pack: center;
+    -webkit-justify-content: center;
+              -ms-flex-pack: center;
+            justify-content: center;
+}
 h1, h2, h3 {
     font-weight: 300;
 }
@@ -46,6 +52,9 @@ button {
 a {
     color: #039be5;
     text-decoration: none;
+}
+ul {
+    list-style-type: none;
 }
 
 /***** Header styles *****/
@@ -180,7 +189,6 @@ input::-webkit-input-placeholder {
     padding-bottom: 0;
 }
 .issues {
-    list-style-type: none;
     margin-left: 15px;
     width: 100%;
 }
@@ -217,6 +225,7 @@ input::-webkit-input-placeholder {
 }
 .left-menu {
     width: 256px;
+    overflow-y: hidden;
 }
 .right-menu {
     width: 160px;
@@ -226,9 +235,6 @@ nav {
     position: fixed;
     z-index: 5;
     font-size: 13px;
-}
-nav ul {
-    list-style-type: none;
 }
 nav ul .nav-heading {
     color: #757575;
@@ -247,7 +253,6 @@ nav ul .nav-item span:hover {
 }
 /* left nav */
 .left-menu nav {
-    height: 82%;
     overflow-y: scroll;
     overflow-x: hidden;
     background-color: #F7F7F7;
@@ -276,6 +281,9 @@ nav ul .nav-item span:hover {
 }
 /* right nav */
 .right-menu nav {
+    overflow-y: hidden;
+}
+.page-nav-list {
     border-left: 4px solid #4285f4;
 }
 .page-nav-list li span,
@@ -353,3 +361,76 @@ pre .api-key {
 }
 
 /***** Footer styles *****/
+
+/*general*/
+footer {
+    position: relative;
+    z-index: 10;
+    font-size: 14px;
+}
+footer .footer-wrap:nth-child(1) {
+    background-color: #F7F7F7;
+}
+footer .footer-wrap:nth-child(2) {
+    background-color: #263238;
+    color: #fff;
+    position: relative;
+}
+footer .footer-wrap:nth-child(3) {
+    background-color: #455A64;
+    color: #fff;
+}
+/* promos */
+.promo-wrap {
+    padding: 20px 4px;
+}
+.promo {
+    width: 192px;
+    text-align: center;
+    margin: 20px;
+}
+.promo img {
+    height: 48px;
+    margin-bottom: 8px;
+}
+.promo a {
+    color: #000;
+    font-weight: bold;
+}
+.promo-text {
+    margin-top: 3px;
+}
+/* linkbox */
+.linkbox {
+    width: 278px;
+    padding: 24px 40px 40px;
+    position: relative;
+    z-index: 10;
+    background-color: #263238;
+}
+.linkbox h3 {
+    font-weight: 500;
+    font-size: 14px;
+}
+.linkbox li {
+    cursor: pointer;
+    color: #cfd8dc;
+    margin: 16px 0;
+}
+.linkbox li:hover {
+    color: #fff;
+}
+.linkbox:last-child {
+    background-color: #37424B;
+}
+footer .footer-wrap:nth-child(2):after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 25%;
+    height: 100%;
+    right: 0;
+    top: 0;
+    z-index: 5;
+    background-color: #37424B;
+}
