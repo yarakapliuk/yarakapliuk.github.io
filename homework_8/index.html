@@ -326,12 +326,15 @@
         // get real height of right nav
         rightStyle = getComputedStyle(rightNav);
         rightHeight = parseInt(rightStyle.height);
+
         // calculate needed heights for navs
         contentStyle = getComputedStyle(content);
         navHeight = document.documentElement.clientHeight - parseInt(contentStyle.marginTop) - parseInt(contentStyle.marginBottom);
+
         // set needed height for navs
         leftNav.style.height = navHeight + "px";
         rightNav.style.height = navHeight + "px";
+
         // func for change heights on scroll
         function setHeight(elem, value) {
             if(value > 0) {
@@ -343,15 +346,19 @@
         }
         
         window.onscroll = function() {
+
             // check if footer is in visible area
             footerVisible = document.documentElement.clientHeight - footer.getBoundingClientRect().top;
+
             // change heights if footer is visible
             setHeight(leftNav, footerVisible);
             setHeight(rightNav, footerVisible);
+
             // add scrollbar if can't show all content in right nav
             parseInt(rightNav.style.height) < rightHeight
             ? rightNav.style.overflowY = "scroll"
             : rightNav.style.overflowY = "hidden" ;
+
         }
     </script>
 </body>
