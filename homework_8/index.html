@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Mono|Roboto:300,400" rel="stylesheet">
-    <link rel="stylesheet" href="style.css?1">
+    <link rel="stylesheet" href="style.css?2">
 </head>
 
 <body>
@@ -14,7 +14,7 @@
         <div class="container">
             <div class="flex-row header-row">
 
-                <div class="left flex-row">
+                <div class="left flex-row items-stretch">
                     <div class="image">
                         <img src="https://www.gstatic.com/images/branding/product/1x/maps_64dp.png" alt="">
                     </div>
@@ -24,7 +24,7 @@
                     </div>
                 </div>
 
-                <div class="right flex-row">
+                <div class="right flex-row row-end items-center">
                     <div class="searchblock">
                         <input type="text" placeholder="Поиск">
                     </div>
@@ -42,7 +42,7 @@
 
             <div class="flex-row header-row header-row-nopadding">
 
-                <div class="left flex-row">
+                <div class="left flex-row items-stretch">
                     <ul class="issues flex-row row-space-between">
                         <li>НАЧАЛО</li>
                         <li class="active">РУКОВОДСТВА</li>
@@ -53,7 +53,7 @@
 
                 </div>
 
-                <div class="right flex-row">
+                <div class="right flex-row row-end items-center">
                     <button class="feedback">
                         Отправить Отзыв
                     </button>
@@ -124,7 +124,7 @@
                    
                     <div class="flex-row row-space-between">
                         <h1>Начало работы</h1>
-                        <div class="rating flex-row">
+                        <div class="rating flex-row direction-reverse">
                             <div></div>
                             <div></div>
                             <div></div>
@@ -243,7 +243,7 @@
             </div>
         </div> 
         <div class="footer-wrap">
-            <div class="container flex-row row-space-between">
+            <div class="container flex-row row-center">
                 <div class="linkbox">
                     <h3>Подробнее</h3>
                     <ul>
@@ -272,12 +272,48 @@
                     </ul>
                 </div>
                 <div class="linkbox">
-                    <h3>111</h3>
+                    <a href="https://developers.google.com/?hl=ru">
+                        <img class="devsite-footer-linkbox-logo" src="https://developers.google.com/_static/6a4b916e46/images/redesign-14/logo-color-knockout.svg?hl=ru">
+                    </a>
+                    <ul>
+                        <li>Android</li>
+                        <li>Chrome</li>
+                        <li>Firebase</li>
+                        <li>Google Cloud Platform</li>
+                        <li>Все продукты</li>
+                    </ul>
                 </div>
             </div>
         </div>
         <div class="footer-wrap">
-           
+           <div class="container flex-row row-space-between">
+                <div class="footer-left flex-row">
+                    <form action="">
+                        <select name="language" id="language">
+                            <option value="ru" selected="selected">Русский</option>
+                            <option value="de">Deutch</option>
+                            <option value="en">English</option>
+                            <option value="fr">Français</option>
+                        </select>
+                    </form>
+                    <div class="footer-links flex-row items-center">
+                        <a href="https://developers.google.com/terms/site-terms?hl=ru">
+                            Условия использования
+                        </a>
+                        <a href="https://www.google.com/policies/privacy/?hl=ru">
+                            Конфиденциальность
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-right flex-row row-end items-center">
+                    <span>
+                        Sign up for the Google Developers newsletter
+                    </span>
+                    <button class="subscribe">
+                        Подписаться
+                    </button>
+                </div>
+           </div>
         </div>
     </footer>
     <script>
@@ -285,15 +321,18 @@
             rightNav = document.querySelector(".right-menu nav"),
             content = document.querySelector(".content-wrap"),
             footer = document.querySelector("footer"),
-            navHeight, contentStyle, footerVisible;
+            navHeight, rightHeight, rightStyle, contentStyle, footerVisible;
         
+        // get real height of right nav
+        rightStyle = getComputedStyle(rightNav);
+        rightHeight = parseInt(rightStyle.height);
+        // calculate needed heights for navs
         contentStyle = getComputedStyle(content);
-        
         navHeight = document.documentElement.clientHeight - parseInt(contentStyle.marginTop) - parseInt(contentStyle.marginBottom);
-        
+        // set needed height for navs
         leftNav.style.height = navHeight + "px";
         rightNav.style.height = navHeight + "px";
-        
+        // func for change heights on scroll
         function setHeight(elem, value) {
             if(value > 0) {
                 elem.style.height = navHeight - value + "px"
@@ -304,14 +343,15 @@
         }
         
         window.onscroll = function() {
+            // check if footer is in visible area
             footerVisible = document.documentElement.clientHeight - footer.getBoundingClientRect().top;
-            
+            // change heights if footer is visible
             setHeight(leftNav, footerVisible);
             setHeight(rightNav, footerVisible);
-            
-//            footerVisible > 0 ?
-//            leftNav.style.height = navHeight - footerVisible + "px"
-//            : leftNav.style.height = navHeight + "px";
+            // add scrollbar if can't show all content in right nav
+            parseInt(rightNav.style.height) < rightHeight
+            ? rightNav.style.overflowY = "scroll"
+            : rightNav.style.overflowY = "hidden" ;
         }
     </script>
 </body>
