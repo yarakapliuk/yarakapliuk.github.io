@@ -37,15 +37,15 @@ a {
 ul {
     list-style-type: none;
 }
+
+/***** Flexbox styles *****/
+
 .flex-row {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
 }
-
-/***** Flexbox styles *****/
-
 .row-space-between {
            -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
