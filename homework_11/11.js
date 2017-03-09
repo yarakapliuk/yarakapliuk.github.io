@@ -46,7 +46,6 @@ window.onload = function() {
 
         for(var i=0; i<n; i++) {
             var img = document.createElement("img");
-            img.alt = "image" + (i + 1);
             img.src = images[i];
             img.classList.add("gallery-image");
             img.dataset.filtered = i;
