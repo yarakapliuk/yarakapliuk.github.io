@@ -43,7 +43,7 @@ window.onload = function() {
     function createGallery(n) {
 
         var images = JSON.parse(imagesData);
-            galleryContainer = document.querySelector(".gallery-container");
+        galleryContainer = document.querySelector(".gallery-container");
 
         for(var i=0; i<n; i++) {
             var img = document.createElement("img");
@@ -61,46 +61,47 @@ window.onload = function() {
             indexRight = galleryImages.length-1,
             indexLeft = 0;
 
-            function rotateRight() {
+            function rotate(direction, event) {
 
-                if (indexRight < images.length-1) {
+                if(direction == "right") {
+                    if (indexRight < images.length-1) {
 
-                    indexRight += 1;
-                    indexLeft += 1;
+                        indexRight += 1;
+                        indexLeft += 1;
 
-                    for(var i=0; i<galleryImages.length; i++) {
-                        galleryImages[i].src = images[+galleryImages[i].dataset.filtered + 1];
-                        galleryImages[i].dataset.filtered = +galleryImages[i].dataset.filtered + 1;
-                        prev.classList.remove("btn-inactive");
+                        for(var i=0; i<galleryImages.length; i++) {
+                            galleryImages[i].src = images[+galleryImages[i].dataset.filtered + 1];
+                            galleryImages[i].dataset.filtered = +galleryImages[i].dataset.filtered + 1;
+                            prev.classList.remove("btn-inactive");
+                        }
+
+                        if (indexRight == images.length-1) {
+                            next.classList.add("btn-inactive");
+                        }
                     }
+                }
+                
+                else if(direction == "left") {
+                    if (indexLeft > 0) {
 
-                    if (indexRight == images.length-1) {
-                        this.classList.add("btn-inactive");
+                        indexRight -= 1;
+                        indexLeft -= 1;
+
+                        for(var i=0; i<galleryImages.length; i++) {
+                            galleryImages[i].src = images[+galleryImages[i].dataset.filtered - 1];
+                            galleryImages[i].dataset.filtered = +galleryImages[i].dataset.filtered - 1;
+                            next.classList.remove("btn-inactive");
+                        }
+
+                        if (indexLeft == 0) {
+                            prev.classList.add("btn-inactive");
+                        }
                     }
                 }
             }
 
-            function rotateLeft() {
-
-                if (indexLeft > 0) {
-
-                    indexRight -= 1;
-                    indexLeft -= 1;
-
-                    for(var i=0; i<galleryImages.length; i++) {
-                        galleryImages[i].src = images[+galleryImages[i].dataset.filtered - 1];
-                        galleryImages[i].dataset.filtered = +galleryImages[i].dataset.filtered - 1;
-                        next.classList.remove("btn-inactive");
-                    }
-
-                    if (indexLeft == 0) {
-                        this.classList.add("btn-inactive");
-                    }
-                }
-            }
-
-            next.addEventListener("click",rotateRight);
-            prev.addEventListener("click",rotateLeft);
+            next.addEventListener("click",rotate.bind(null,"right"));
+            prev.addEventListener("click",rotate.bind(null,"left"));
         }
         rotateSlides();
     }
