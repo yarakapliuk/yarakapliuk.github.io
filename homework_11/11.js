@@ -61,51 +61,57 @@ window.onload = function() {
             indexRight = galleryImages.length-1,
             indexLeft = 0;
 
+            function changeSlides(currentBtn,oppositeBtn,step,limit) {
+                
+                var currentIndex = 0;
+
+                if(step == 1) {
+                    currentIndex = indexRight;
+                }
+                else if (step == -1) {
+                    currentIndex = indexLeft;
+                }
+
+                indexRight += step;
+                indexLeft += step;
+                currentIndex += step;
+                
+                for(var i=0; i<galleryImages.length; i++) {
+                    galleryImages[i].src = images[+galleryImages[i].dataset.filtered + step];
+                    galleryImages[i].dataset.filtered = +galleryImages[i].dataset.filtered + step;
+                    oppositeBtn.classList.remove("btn-inactive");
+                }
+
+                if (currentIndex == limit) {
+                    currentBtn.classList.add("btn-inactive");
+                }
+            }
+
             function rotate(direction, event) {
-
                 if(direction == "right") {
-                    if (indexRight < images.length-1) {
 
-                        indexRight += 1;
-                        indexLeft += 1;
+                    var step = 1,
+                    limit = images.length-1;
 
-                        for(var i=0; i<galleryImages.length; i++) {
-                            galleryImages[i].src = images[+galleryImages[i].dataset.filtered + 1];
-                            galleryImages[i].dataset.filtered = +galleryImages[i].dataset.filtered + 1;
-                            prev.classList.remove("btn-inactive");
-                        }
-
-                        if (indexRight == images.length-1) {
-                            next.classList.add("btn-inactive");
-                        }
+                    if (indexRight < limit) {
+                        changeSlides(next,prev,step,limit);
                     }
                 }
                 
                 else if(direction == "left") {
-                    if (indexLeft > 0) {
 
-                        indexRight -= 1;
-                        indexLeft -= 1;
+                    var step = -1,
+                    limit = 0;
 
-                        for(var i=0; i<galleryImages.length; i++) {
-                            galleryImages[i].src = images[+galleryImages[i].dataset.filtered - 1];
-                            galleryImages[i].dataset.filtered = +galleryImages[i].dataset.filtered - 1;
-                            next.classList.remove("btn-inactive");
-                        }
-
-                        if (indexLeft == 0) {
-                            prev.classList.add("btn-inactive");
-                        }
-                    }
+                    if(indexLeft > limit) {
+                        changeSlides(prev,next,step,limit);
+                    }  
                 }
             }
-
             next.addEventListener("click",rotate.bind(null,"right"));
             prev.addEventListener("click",rotate.bind(null,"left"));
         }
         rotateSlides();
     }
-
-    createGallery(3);
-    
+    createGallery(3); 
 }
