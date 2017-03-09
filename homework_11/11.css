@@ -1,0 +1,68 @@
+.row {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: 500px;
+}
+.home, .gallery, .contact {
+    height: 400px;
+    border: 1px solid black;
+    text-align: center;
+    display: none;
+}
+button {
+    cursor: pointer;
+}
+.active {
+    display: block;
+}
+.gallery-container {
+	height: 250px;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-justify-content: space-between;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+}
+.gallery-container img {
+	height: 250px;
+}
+.controls {
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-justify-content: space-around;
+	    -ms-flex-pack: distribute;
+	        justify-content: space-around;
+}
+.left, .right {
+	width: 50px;
+	height: 50px;
+	line-height: 48px;
+	background-color: pink;
+	border: 1px solid purple;
+	border-radius: 5px;
+	margin-top: 20px;
+	cursor: pointer;
+	color: purple;
+	font-size: 36px;
+	font-weight: bold;
+}
+.left:hover, .right:hover {
+	background: lightblue;
+	border: 1px solid blue;
+	color: blue;
+}
+.btn-inactive,
+.btn-inactive:hover {
+	background-color: lightgray;
+	border: 1px solid black;
+	color: black;
+}
+.controls div::-moz-selection {
+	background: transparent;
+}
+.controls div::selection {
+	background: transparent;
+}
