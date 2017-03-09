@@ -42,6 +42,7 @@ window.onload = function() {
     var images = JSON.parse(imagesData);
 
     function createGallery(n) {
+
         var galleryContainer = document.querySelector(".gallery-container");
 
         for(var i=0; i<n; i++) {
@@ -78,7 +79,6 @@ window.onload = function() {
                     this.classList.add("btn-inactive");
                 }
             }
-
         }
 
         function rotateLeft() {
