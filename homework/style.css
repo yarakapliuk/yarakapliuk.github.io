@@ -1,5 +1,6 @@
 #table td, #table th {
     border: 2px solid black;
+    height: 18px;
 }
 #table {
     border: 2px dashed black;
@@ -8,6 +9,15 @@
     background-color: #eeeeee;
     cursor: pointer;
 }
-.form {
-    margin-top: 20px;
+.row {
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	margin-top: 20px;
+}
+button {
+    cursor: pointer;
+}
+.controls {
+		margin-left: 20px;
 }
