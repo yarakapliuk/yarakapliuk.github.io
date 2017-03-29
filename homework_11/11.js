@@ -37,13 +37,20 @@ window.onload = function() {
     "images/5.jpg",
     "images/6.jpg",
     "images/7.jpg",
-    "images/8.jpg"
+    "images/8.jpg",
     ]`;
 
     function createGallery(n) {
+        var images = [];
+        try {
+            images= JSON.parse(imagesData);
+        }
+        catch (e) {
+            console.dir(e);
+        }
 
-        var images = JSON.parse(imagesData);
-        galleryContainer = document.querySelector(".gallery-container");
+        
+        var galleryContainer = document.querySelector(".gallery-container");
 
         for(var i=0; i<n; i++) {
             var img = document.createElement("img");

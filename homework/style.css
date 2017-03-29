@@ -1,0 +1,13 @@
+#table td, #table th {
+    border: 2px solid black;
+}
+#table {
+    border: 2px dashed black;
+}
+#table td:hover {
+    background-color: #eeeeee;
+    cursor: pointer;
+}
+.form {
+    margin-top: 20px;
+}
